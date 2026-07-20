@@ -722,21 +722,54 @@ footer{background:var(--white);border-top:1px solid var(--thales-line);padding:5
 
 <script>
 (function(){
+  /* =====================================================================
+     ENVOI DES LEADS VERS GOOGLE SHEET
+     ---------------------------------------------------------------------
+     1. Ouvrez votre Google Sheet > menu Extensions > Apps Script.
+     2. Collez le script fourni dans le fichier "google-apps-script.gs".
+     3. Déployez-le en tant qu'application Web (accès : "Tout le monde").
+     4. Copiez l'URL de déploiement (…/exec) et collez-la ci-dessous.
+     Voir le guide détaillé : SETUP-GOOGLE-SHEET.md
+  ===================================================================== */
+  var SHEET_ENDPOINT = 'https://script.google.com/macros/s/XXXXXXXXXXXX/exec'; // ← à remplacer
+
   var form = document.getElementById('leadForm');
   var success = document.getElementById('formSuccess');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(!form.checkValidity()){
-      form.reportValidity();
-      return;
-    }
-    // Point d'intégration : brancher ici l'envoi vers votre CRM / endpoint / service email.
-    // Exemple : fetch('/api/lead', { method:'POST', body: new FormData(form) })
-    var data = Object.fromEntries(new FormData(form).entries());
-    console.log('Lead Sage 100 Experience Cloud :', data);
+  var btn = form.querySelector('button[type=submit]');
+  var btnLabel = btn.innerHTML;
+
+  function showSuccess(){
     form.style.display = 'none';
     success.style.display = 'block';
     success.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+
+    var data = new FormData(form);
+    data.append('date', new Date().toLocaleString('fr-FR'));
+    data.append('source', 'Landing Sage 100 Experience Cloud');
+    data.append('page', location.href);
+
+    // Tant que l'endpoint n'est pas configuré, on affiche la confirmation sans envoi réseau.
+    if(SHEET_ENDPOINT.indexOf('XXXXXXXXXXXX') !== -1){
+      console.log('Lead (endpoint non configuré) :', Object.fromEntries(data.entries()));
+      showSuccess();
+      return;
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = 'Envoi en cours…';
+
+    fetch(SHEET_ENDPOINT, { method:'POST', body:data, mode:'no-cors' })
+      .then(function(){ showSuccess(); })
+      .catch(function(){
+        // Le mode no-cors ne renvoie pas d'erreur exploitable ; on confirme quand même.
+        showSuccess();
+      })
+      .finally(function(){ btn.disabled = false; btn.innerHTML = btnLabel; });
   });
 })();
 </script>
