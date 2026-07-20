@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sage 100 Experience Cloud — Passez à la gestion nouvelle génération | Thalès Informatique</title>
+<meta name="description" content="Découvrez Sage 100 Experience Cloud avec Thalès Informatique, partenaire Sage n°1 en Afrique du Nord. Gérez votre entreprise partout, en toute sécurité. Demandez votre démo gratuite." />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph (LinkedIn / réseaux sociaux) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sage 100 Experience Cloud — La gestion nouvelle génération" />
+<meta property="og:description" content="Pilotez votre entreprise partout, en toute sécurité, avec Sage 100 Experience Cloud. Accompagnement expert par Thalès Informatique. Démo gratuite." />
+<meta property="og:site_name" content="Thalès Informatique" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  /* Bleus de marque — CHARTE */
+  --thales-cyan:#00B7F1;
+  --thales-blue:#0076B6;
+  /* Encre & neutres */
+  --thales-ink:#0B2A45;
+  --thales-slate:#5B7186;
+  --thales-line:#E3EBF2;
+  --thales-bg:#F6F9FC;
+  --white:#FFFFFF;
+  --thales-gradient:linear-gradient(135deg,#00B7F1 0%,#0076B6 100%);
+  --shadow:0 8px 24px rgba(11,42,69,.08);
+  --shadow-lg:0 20px 60px rgba(11,42,69,.14);
+  --radius:14px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Poppins","Segoe UI",system-ui,sans-serif;
+  color:var(--thales-ink);
+  background:var(--white);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:96px 0}
+.section--tight{padding:64px 0}
+.bg-soft{background:var(--thales-bg)}
+
+.label{
+  display:inline-block;
+  font-size:13px;font-weight:500;
+  text-transform:uppercase;letter-spacing:.12em;
+  color:var(--thales-blue);
+  margin-bottom:16px;
+}
+h1,h2,h3{letter-spacing:-.02em;line-height:1.15}
+h2{font-size:clamp(28px,3.4vw,42px);font-weight:700}
+h3{font-size:20px;font-weight:600}
+.section-head{max-width:720px;margin:0 auto 56px;text-align:center}
+.section-head p{color:var(--thales-slate);font-size:18px;margin-top:16px}
+
+/* Boutons */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:inherit;font-weight:600;font-size:16px;
+  padding:15px 30px;border-radius:10px;border:none;cursor:pointer;
+  transition:all .22s ease;
+}
+.btn-primary{background:var(--thales-cyan);color:var(--white)}
+.btn-primary:hover{background:var(--thales-blue);transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,118,182,.32)}
+.btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.55)}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-lg{padding:18px 40px;font-size:17px}
+.btn-block{width:100%;justify-content:center}
+
+/* ============ HEADER ============ */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--thales-line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:34px;height:34px;flex-shrink:0}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-text b{font-size:19px;font-weight:700;color:var(--thales-ink);letter-spacing:.02em}
+.logo-text span{font-size:10px;font-weight:500;letter-spacing:.34em;color:var(--thales-blue);text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{font-size:15px;font-weight:500;color:var(--thales-slate);transition:color .2s}
+.nav-links a:hover{color:var(--thales-blue)}
+.nav .btn{padding:11px 22px;font-size:15px}
+.nav-cta-only{display:none}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(0,183,241,.14), transparent 60%),
+    radial-gradient(900px 500px at 10% 110%, rgba(0,118,182,.10), transparent 60%),
+    var(--white);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;
+  padding:80px 0 90px;
+}
+.hero h1{font-size:clamp(34px,4.6vw,56px);font-weight:800;color:var(--thales-ink)}
+.hero h1 .accent{color:var(--thales-blue)}
+.hero-sub{font-size:19px;color:var(--thales-slate);margin:22px 0 34px;max-width:540px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--white);border:1px solid var(--thales-line);
+  padding:8px 16px;border-radius:100px;font-size:13.5px;font-weight:500;color:var(--thales-ink);
+  box-shadow:var(--shadow);
+}
+.pill svg{color:var(--thales-cyan)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-actions .btn-primary{background:var(--thales-gradient)}
+.hero-note{margin-top:18px;font-size:13.5px;color:var(--thales-slate);display:flex;align-items:center;gap:8px}
+
+/* Carte visuelle hero */
+.hero-visual{position:relative}
+.dashboard-card{
+  background:var(--white);border-radius:20px;box-shadow:var(--shadow-lg);
+  border:1px solid var(--thales-line);overflow:hidden;
+}
+.dash-top{background:var(--thales-gradient);padding:18px 22px;display:flex;align-items:center;justify-content:space-between}
+.dash-top b{color:#fff;font-size:15px;font-weight:600}
+.dash-dots{display:flex;gap:6px}
+.dash-dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.55);display:block}
+.dash-body{padding:24px}
+.kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
+.kpi{background:var(--thales-bg);border-radius:12px;padding:16px}
+.kpi span{font-size:12px;color:var(--thales-slate);font-weight:500}
+.kpi b{display:block;font-size:24px;font-weight:700;color:var(--thales-ink);margin-top:4px}
+.kpi em{font-style:normal;font-size:12px;font-weight:600;color:var(--thales-blue)}
+.chart{display:flex;align-items:flex-end;gap:10px;height:120px;padding:14px 4px 0;border-top:1px solid var(--thales-line)}
+.chart i{flex:1;border-radius:6px 6px 0 0;background:var(--thales-gradient);opacity:.85;display:block}
+.floating{
+  position:absolute;background:#fff;border-radius:12px;box-shadow:var(--shadow-lg);
+  padding:12px 16px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--thales-ink);
+  border:1px solid var(--thales-line);
+}
+.floating svg{color:var(--thales-cyan)}
+.floating--tl{top:-18px;left:-24px}
+.floating--br{bottom:24px;right:-24px}
+
+/* Bandeau confiance */
+.trust{border-top:1px solid var(--thales-line);border-bottom:1px solid var(--thales-line);background:var(--white)}
+.trust .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding-top:26px;padding-bottom:26px}
+.trust-txt{font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--thales-slate)}
+.trust-stats{display:flex;flex-wrap:wrap;gap:40px}
+.trust-stat b{font-size:30px;font-weight:800;color:var(--thales-blue);letter-spacing:-.02em}
+.trust-stat span{display:block;font-size:13px;color:var(--thales-slate);font-weight:500}
+
+/* ============ AVANTAGES CLOUD ============ */
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{
+  background:var(--white);border:1px solid var(--thales-line);border-radius:var(--radius);
+  padding:32px;transition:transform .25s,box-shadow .25s;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.card-ico{
+  width:52px;height:52px;border-radius:12px;background:rgba(0,183,241,.1);
+  display:flex;align-items:center;justify-content:center;color:var(--thales-blue);margin-bottom:20px;
+}
+.card h3{margin-bottom:10px}
+.card p{color:var(--thales-slate);font-size:15px}
+
+/* ============ FONCTIONNALITES SAGE ============ */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.feat-list{list-style:none;margin-top:12px}
+.feat-list li{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--thales-line)}
+.feat-list li:last-child{border-bottom:none}
+.feat-check{
+  flex-shrink:0;width:30px;height:30px;border-radius:8px;background:var(--thales-gradient);
+  display:flex;align-items:center;justify-content:center;color:#fff;
+}
+.feat-list b{display:block;font-size:16px;font-weight:600;color:var(--thales-ink)}
+.feat-list p{font-size:14.5px;color:var(--thales-slate);margin-top:2px}
+.feat-visual{
+  background:var(--thales-gradient);border-radius:22px;padding:44px;color:#fff;position:relative;overflow:hidden;
+  box-shadow:var(--shadow-lg);
+}
+.feat-visual::after{
+  content:"";position:absolute;right:-60px;bottom:-60px;width:240px;height:240px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,8 92,86 8,86' fill='none' stroke='white' stroke-width='2'/></svg>") no-repeat;
+  opacity:.12;
+}
+.feat-visual .big{font-size:52px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.feat-visual h3{color:#fff;font-size:23px;margin:8px 0 14px}
+.feat-visual p{color:rgba(255,255,255,.88);font-size:15px}
+.mini-metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.mini-metric{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:16px}
+.mini-metric b{font-size:26px;font-weight:700;display:block}
+.mini-metric span{font-size:13px;color:rgba(255,255,255,.85)}
+
+/* ============ BANDEAU CYAN (charte) ============ */
+.band{background:var(--thales-cyan);text-align:center;padding:22px 0}
+.band h2{color:#fff;font-size:clamp(20px,2.4vw,28px);font-weight:700}
+
+/* ============ TROPHEES ============ */
+.awards{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.award{background:var(--white);border:1px solid var(--thales-line);border-radius:var(--radius);padding:26px 20px;text-align:center;transition:transform .25s,box-shadow .25s}
+.award:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.award-ico{width:46px;height:46px;margin:0 auto 14px;color:var(--thales-cyan)}
+.award b{display:block;font-size:15px;font-weight:600;color:var(--thales-ink);line-height:1.3}
+.award span{display:block;font-size:12.5px;color:var(--thales-slate);margin-top:6px}
+.award em{display:block;font-style:normal;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--thales-blue);margin-top:10px}
+
+/* ============ TEMOIGNAGES ============ */
+.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.testi{background:var(--white);border:1px solid var(--thales-line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
+.testi .quote-mark{font-size:56px;line-height:.4;color:var(--thales-cyan);font-family:Georgia,serif;display:block;height:24px}
+.testi p{font-size:16px;color:var(--thales-ink);font-style:italic;margin:14px 0 22px}
+.testi-author{display:flex;align-items:center;gap:14px}
+.testi-avatar{width:46px;height:46px;border-radius:50%;background:var(--thales-gradient);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px}
+.testi-author b{display:block;font-size:15px;font-weight:600}
+.testi-author span{font-size:13px;color:var(--thales-slate)}
+
+/* ============ FORMULAIRE / CTA ============ */
+.cta-section{background:var(--thales-ink);position:relative;overflow:hidden}
+.cta-section::before{
+  content:"";position:absolute;top:-120px;right:-120px;width:420px;height:420px;
+  background:radial-gradient(circle,rgba(0,183,241,.25),transparent 70%);
+}
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
+.cta-left .label{color:var(--thales-cyan)}
+.cta-left h2{color:#fff}
+.cta-left>p{color:rgba(255,255,255,.75);font-size:18px;margin-top:16px}
+.cta-benefits{list-style:none;margin-top:32px}
+.cta-benefits li{display:flex;gap:12px;align-items:center;color:rgba(255,255,255,.92);font-size:16px;margin-bottom:16px}
+.cta-benefits svg{flex-shrink:0;color:var(--thales-cyan)}
+.cta-contact{margin-top:38px;padding-top:28px;border-top:1px solid rgba(255,255,255,.15);display:flex;flex-wrap:wrap;gap:26px}
+.cta-contact a{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.9);font-size:14.5px;font-weight:500}
+.cta-contact svg{color:var(--thales-cyan)}
+
+.form-card{background:var(--white);border-radius:20px;padding:38px;box-shadow:var(--shadow-lg)}
+.form-card h3{font-size:22px;margin-bottom:6px}
+.form-card>p{color:var(--thales-slate);font-size:14.5px;margin-bottom:26px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--thales-ink);margin-bottom:7px}
+.field label .req{color:#EF4136}
+.field input,.field select,.field textarea{
+  width:100%;font-family:inherit;font-size:15px;color:var(--thales-ink);
+  padding:13px 15px;border:1.5px solid var(--thales-line);border-radius:10px;
+  background:var(--white);transition:border-color .2s,box-shadow .2s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--thales-cyan);box-shadow:0 0 0 3px rgba(0,183,241,.15);
+}
+.field textarea{resize:vertical;min-height:84px}
+.form-consent{display:flex;gap:10px;align-items:flex-start;margin:6px 0 20px}
+.form-consent input{margin-top:4px;flex-shrink:0;width:16px;height:16px;accent-color:var(--thales-cyan)}
+.form-consent label{font-size:12.5px;color:var(--thales-slate);line-height:1.5}
+.form-card .btn-primary{background:var(--thales-gradient)}
+.form-success{
+  display:none;text-align:center;padding:30px 10px;
+}
+.form-success .check-big{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:rgba(0,183,241,.12);display:flex;align-items:center;justify-content:center;color:var(--thales-blue)}
+.form-success h3{color:var(--thales-ink)}
+.form-success p{color:var(--thales-slate);font-size:15px;margin-top:10px}
+.form-privacy{text-align:center;font-size:12px;color:var(--thales-slate);margin-top:16px;display:flex;align-items:center;justify-content:center;gap:6px}
+.form-privacy svg{color:var(--thales-blue)}
+
+/* ============ FOOTER ============ */
+footer{background:var(--white);border-top:1px solid var(--thales-line);padding:56px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-brand p{color:var(--thales-slate);font-size:14.5px;margin-top:18px;max-width:340px}
+.foot-col h4{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--thales-ink);margin-bottom:18px;font-weight:600}
+.foot-col a,.foot-col p{display:flex;gap:10px;align-items:flex-start;color:var(--thales-slate);font-size:14.5px;margin-bottom:12px}
+.foot-col a:hover{color:var(--thales-blue)}
+.foot-col svg{flex-shrink:0;color:var(--thales-cyan);margin-top:3px}
+.socials{display:flex;gap:12px;margin-top:20px}
+.socials a{width:38px;height:38px;border-radius:9px;border:1px solid var(--thales-line);display:flex;align-items:center;justify-content:center;color:var(--thales-blue);transition:all .2s}
+.socials a:hover{background:var(--thales-gradient);color:#fff;border-color:transparent}
+.foot-bottom{border-top:1px solid var(--thales-line);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:var(--thales-slate)}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:960px){
+  .hero-grid,.feat-grid,.cta-grid{grid-template-columns:1fr;gap:44px}
+  .cards-grid,.testi-grid{grid-template-columns:1fr}
+  .awards{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .nav-cta-only{display:inline-flex}
+  .floating--tl{left:0}
+  .floating--br{right:0}
+  .section{padding:64px 0}
+}
+@media(max-width:560px){
+  .form-row{grid-template-columns:1fr}
+  .awards,.foot-grid{grid-template-columns:1fr}
+  .trust-stats{gap:26px}
+  .hero-actions{flex-direction:column}
+  .hero-actions .btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="container nav">
+    <a href="#" class="logo" aria-label="Thalès Informatique">
+      <svg class="logo-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#00B7F1"/><stop offset="1" stop-color="#0076B6"/>
+        </linearGradient></defs>
+        <polygon points="50,6 96,90 4,90" fill="url(#lg)"/>
+        <polygon points="50,40 74,84 26,84" fill="#FFFFFF"/>
+      </svg>
+      <span class="logo-text"><b>THALÈS</b><span>Informatique</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#avantages">Avantages</a>
+      <a href="#solution">La solution</a>
+      <a href="#references">Références</a>
+      <a href="#temoignages">Témoignages</a>
+    </nav>
+    <a href="#demande" class="btn btn-primary">Demander une démo</a>
+    <a href="#demande" class="btn btn-primary nav-cta-only">Démo</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="label">Sage 100 Experience Cloud × Thalès Informatique</span>
+      <h1>Pilotez votre entreprise <span class="accent">partout,</span> en toute sérénité.</h1>
+      <p class="hero-sub">Passez à <strong>Sage 100 Experience Cloud</strong> : votre gestion commerciale, comptabilité et paie accessibles en ligne, sécurisées et toujours à jour. Accompagné par le partenaire Sage n°1 en Afrique du Nord.</p>
+
+      <div class="hero-badges">
+        <span class="pill"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z"/></svg> Données hébergées & sécurisées</span>
+        <span class="pill"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/></svg> Accessible 24/7, tout appareil</span>
+        <span class="pill"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Toujours à jour</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#demande" class="btn btn-primary btn-lg">Demander ma démo gratuite
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#avantages" class="btn btn-lg" style="border:1.5px solid var(--thales-line);color:var(--thales-blue)">Découvrir les avantages</a>
+      </div>
+      <p class="hero-note">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:var(--thales-cyan)"><path d="M20 6 9 17l-5-5"/></svg>
+        Démo personnalisée · Sans engagement · Réponse sous 24h ouvrées
+      </p>
+    </div>
+
+    <div class="hero-visual">
+      <div class="dashboard-card">
+        <div class="dash-top">
+          <b>Sage 100 Experience Cloud</b>
+          <span class="dash-dots"><i></i><i></i><i></i></span>
+        </div>
+        <div class="dash-body">
+          <div class="kpi-row">
+            <div class="kpi"><span>Chiffre d'affaires</span><b>2,4 M€</b><em>▲ 12,5 %</em></div>
+            <div class="kpi"><span>Trésorerie</span><b>860 K€</b><em>▲ 8,1 %</em></div>
+          </div>
+          <div class="chart">
+            <i style="height:45%"></i><i style="height:62%"></i><i style="height:38%"></i>
+            <i style="height:78%"></i><i style="height:56%"></i><i style="height:88%"></i>
+            <i style="height:70%"></i><i style="height:96%"></i>
+          </div>
+        </div>
+      </div>
+      <div class="floating floating--tl">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z"/></svg>
+        Sauvegarde automatique
+      </div>
+      <div class="floating floating--br">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+        Tableaux de bord temps réel
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BANDEAU CONFIANCE ============ -->
+<div class="trust">
+  <div class="container">
+    <span class="trust-txt">Partenaire Sage de référence<br>en Afrique du Nord</span>
+    <div class="trust-stats">
+      <div class="trust-stat"><b>+25</b><span>ans d'expertise Sage</span></div>
+      <div class="trust-stat"><b>+1000</b><span>clients accompagnés</span></div>
+      <div class="trust-stat"><b>N°1</b><span>partenaire North Africa</span></div>
+      <div class="trust-stat"><b>5</b><span>distinctions Sage</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ AVANTAGES CLOUD ============ -->
+<section class="section" id="avantages">
+  <div class="container">
+    <div class="section-head">
+      <span class="label">Pourquoi passer au Cloud</span>
+      <h2>Le Cloud change tout pour votre gestion</h2>
+      <p>Fini les contraintes du logiciel installé sur un seul poste. Avec Sage 100 Experience Cloud, votre entreprise gagne en liberté, en sécurité et en performance.</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3v12m0 0-4-4m4 4 4-4"/><path d="M20 17v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2"/></svg></div>
+        <h3>Accessible où que vous soyez</h3>
+        <p>Connectez-vous à votre gestion depuis le bureau, chez vous ou en déplacement, sur ordinateur, tablette ou mobile. Vos données vous suivent partout.</p>
+      </div>
+      <div class="card">
+        <div class="card-ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Sécurité & sauvegarde garanties</h3>
+        <p>Hébergement sécurisé, données chiffrées et sauvegardes automatiques. Vous êtes protégé contre la perte de données, les pannes et les cyber-risques.</p>
+      </div>
+      <div class="card">
+        <div class="card-ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.5 0 4.8 1 6.4 2.6"/><path d="M21 4v5h-5"/></svg></div>
+        <h3>Toujours à jour, sans effort</h3>
+        <p>Mises à jour légales, fiscales et fonctionnelles appliquées automatiquement. Restez conforme et à la pointe sans aucune manipulation technique.</p>
+      </div>
+      <div class="card">
+        <div class="card-ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 4-6"/></svg></div>
+        <h3>Décisions en temps réel</h3>
+        <p>Tableaux de bord et indicateurs actualisés en continu. Pilotez votre activité avec une vision claire de votre trésorerie, vos ventes et vos marges.</p>
+      </div>
+      <div class="card">
+        <div class="card-ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M16 3h5v5M21 3l-7 7M8 21H3v-5M3 21l7-7"/></svg></div>
+        <h3>Évolutif avec votre entreprise</h3>
+        <p>Ajoutez des utilisateurs, des modules ou des fonctionnalités quand vous en avez besoin. La solution grandit au rythme de votre activité.</p>
+      </div>
+      <div class="card">
+        <div class="card-ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 1v6m0 10v6M4.2 4.2l4.3 4.3m7 7 4.3 4.3M1 12h6m10 0h6"/></svg></div>
+        <h3>Coûts maîtrisés</h3>
+        <p>Plus d'investissement lourd en serveurs ni de maintenance imprévue. Un abonnement clair et prévisible, avec l'infrastructure incluse.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUTION SAGE ============ -->
+<section class="section bg-soft" id="solution">
+  <div class="container">
+    <div class="feat-grid">
+      <div>
+        <span class="label">La solution</span>
+        <h2>Sage 100 Experience Cloud, la gestion complète de votre PME</h2>
+        <p style="color:var(--thales-slate);font-size:17px;margin-top:14px">La référence des solutions de gestion pour PME, désormais dans le Cloud. Tous vos métiers réunis dans une plateforme unique, fluide et connectée.</p>
+        <ul class="feat-list">
+          <li>
+            <span class="feat-check"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><b>Gestion commerciale</b><p>Devis, commandes, facturation, achats et stocks pilotés de bout en bout.</p></div>
+          </li>
+          <li>
+            <span class="feat-check"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><b>Comptabilité & finance</b><p>Comptabilité générale, analytique et trésorerie, conformes à la réglementation.</p></div>
+          </li>
+          <li>
+            <span class="feat-check"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><b>Paie & ressources humaines</b><p>Bulletins, déclarations et gestion des collaborateurs simplifiés et à jour.</p></div>
+          </li>
+          <li>
+            <span class="feat-check"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><b>Dématérialisation des processus</b><p>Digitalisez vos documents et automatisez vos flux pour gagner un temps précieux.</p></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="feat-visual">
+        <div class="big">100%</div>
+        <h3>en ligne & sécurisé</h3>
+        <p>Une plateforme unique pour toute votre gestion, accessible en continu et protégée par une infrastructure Cloud professionnelle.</p>
+        <div class="mini-metrics">
+          <div class="mini-metric"><b>24/7</b><span>disponibilité</span></div>
+          <div class="mini-metric"><b>0</b><span>serveur à gérer</span></div>
+          <div class="mini-metric"><b>Auto</b><span>sauvegardes</span></div>
+          <div class="mini-metric"><b>∞</b><span>mises à jour incluses</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BANDEAU CYAN ============ -->
+<div class="band">
+  <div class="container"><h2>« Reconnu par Sage à plusieurs reprises pour son expertise et son leadership en Afrique du Nord »</h2></div>
+</div>
+
+<!-- ============ TROPHEES / REFERENCES ============ -->
+<section class="section" id="references">
+  <div class="container">
+    <div class="section-head">
+      <span class="label">Trophées & distinctions</span>
+      <h2>Un partenaire Sage récompensé et reconnu</h2>
+      <p>Thalès Informatique, c'est plus de 25 ans d'expertise et une reconnaissance officielle de Sage pour ses performances, sa croissance et son accompagnement des migrations.</p>
+    </div>
+    <div class="awards">
+      <div class="award">
+        <div class="award-ico"><svg width="46" height="46" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 0 12 0V3H6v6Z"/><path d="M6 5H3v2a3 3 0 0 0 3 3M18 5h3v2a3 3 0 0 1-3 3M9 21h6M12 15v6"/></svg></div>
+        <b>Premier Partenaire North Africa</b>
+        <span>Sage Partner Sessions Marrakech</span>
+        <em>2017</em>
+      </div>
+      <div class="award">
+        <div class="award-ico"><svg width="46" height="46" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 0 12 0V3H6v6Z"/><path d="M6 5H3v2a3 3 0 0 0 3 3M18 5h3v2a3 3 0 0 1-3 3M9 21h6M12 15v6"/></svg></div>
+        <b>Meilleure Performance Sage</b>
+        <span>Sage Partner Sessions Tunis</span>
+        <em>2018</em>
+      </div>
+      <div class="award">
+        <div class="award-ico"><svg width="46" height="46" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 0 12 0V3H6v6Z"/><path d="M6 5H3v2a3 3 0 0 0 3 3M18 5h3v2a3 3 0 0 1-3 3M9 21h6M12 15v6"/></svg></div>
+        <b>Meilleure Croissance Sage</b>
+        <span>Sage Partner Sessions Tanger</span>
+        <em>2019</em>
+      </div>
+      <div class="award">
+        <div class="award-ico"><svg width="46" height="46" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 0 12 0V3H6v6Z"/><path d="M6 5H3v2a3 3 0 0 0 3 3M18 5h3v2a3 3 0 0 1-3 3M9 21h6M12 15v6"/></svg></div>
+        <b>Customer Migration Journey</b>
+        <span>Sage Partner Sessions Bordeaux</span>
+        <em>2019</em>
+      </div>
+      <div class="award">
+        <div class="award-ico"><svg width="46" height="46" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 0 12 0V3H6v6Z"/><path d="M6 5H3v2a3 3 0 0 0 3 3M18 5h3v2a3 3 0 0 1-3 3M9 21h6M12 15v6"/></svg></div>
+        <b>Top League — Zone Export</b>
+        <span>Distinction Sage</span>
+        <em>2022</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEMOIGNAGES ============ -->
+<section class="section bg-soft" id="temoignages">
+  <div class="container">
+    <div class="section-head">
+      <span class="label">Ils nous font confiance</span>
+      <h2>La parole à nos clients</h2>
+      <p>Des dirigeants et responsables financiers témoignent de leur expérience avec les solutions Sage déployées par Thalès Informatique.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi">
+        <span class="quote-mark">”</span>
+        <p>Sage est une solution parfaitement adaptée aux besoins des PME. Nous avons opté pour Thalès Informatique pour la réactivité de ses collaborateurs qui sont extrêmement compétents.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">LC</div>
+          <div><b>M. Laurent Chevreau</b><span>Directeur Général — SOCIMAR</span></div>
+        </div>
+      </div>
+      <div class="testi">
+        <span class="quote-mark">”</span>
+        <p>Thalès Informatique nous accompagne dans la mise à jour de notre solution dans les meilleures conditions en termes de délai et de qualité.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RO</div>
+          <div><b>M. Rachid Oueski</b><span>DAF — HEA Trade &amp; Services</span></div>
+        </div>
+      </div>
+      <div class="testi">
+        <span class="quote-mark">”</span>
+        <p>Être entouré par des consultants expérimentés signifie que nous pouvons toujours trouver des solutions. Le produit est parfait ! Notre coopération tourne très bien sur tous les points de vue avec Thalès.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">NG</div>
+          <div><b>M. Noureddine Gnaou</b><span>PDG — SOREMAR GROUP</span></div>
+        </div>
+      </div>
+      <div class="testi">
+        <span class="quote-mark">”</span>
+        <p>L'acquisition de la solution Sage, jusqu'à la mise à jour vers la version 100c, était une décision stratégique pour développer notre chiffre d'affaires et dématérialiser nos processus.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AK</div>
+          <div><b>Mme Ahlam Kadim</b><span>EM — POLLUCLEAN</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMULAIRE / CTA ============ -->
+<section class="section cta-section" id="demande">
+  <div class="container cta-grid">
+    <div class="cta-left">
+      <span class="label">Passez à l'action</span>
+      <h2>Demandez votre démo personnalisée gratuite</h2>
+      <p>Un expert Thalès Informatique vous contacte pour analyser vos besoins et vous montrer comment Sage 100 Experience Cloud transforme votre gestion.</p>
+      <ul class="cta-benefits">
+        <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Démo adaptée à votre secteur d'activité</li>
+        <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Étude de votre migration vers le Cloud</li>
+        <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Conseils d'experts certifiés Sage</li>
+        <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Sans engagement, réponse sous 24h ouvrées</li>
+      </ul>
+      <div class="cta-contact">
+        <a href="tel:+212522548780"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg> 05 22 54 87 80</a>
+        <a href="https://wa.me/212661168354" target="_blank" rel="noopener"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.2-5.6A8.4 8.4 0 1 1 21 11.5Z"/></svg> WhatsApp</a>
+        <a href="mailto:contact@thales.ma"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> contact@thales.ma</a>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <form id="leadForm" novalidate>
+        <h3>Recevoir ma démo gratuite</h3>
+        <p>Remplissez le formulaire, nous vous recontactons rapidement.</p>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="prenom">Prénom <span class="req">*</span></label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+          </div>
+          <div class="field">
+            <label for="nom">Nom <span class="req">*</span></label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="entreprise">Entreprise <span class="req">*</span></label>
+          <input type="text" id="entreprise" name="entreprise" placeholder="Nom de votre société" required />
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Email professionnel <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="nom@entreprise.ma" required />
+          </div>
+          <div class="field">
+            <label for="tel">Téléphone <span class="req">*</span></label>
+            <input type="tel" id="tel" name="tel" placeholder="06 00 00 00 00" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="fonction">Votre fonction</label>
+          <select id="fonction" name="fonction">
+            <option value="">Sélectionnez…</option>
+            <option>Dirigeant / Gérant (DG, PDG)</option>
+            <option>Directeur Financier (DAF)</option>
+            <option>Directeur / Responsable SI (DSI)</option>
+            <option>Responsable Comptabilité</option>
+            <option>Responsable RH / Paie</option>
+            <option>Autre</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Votre besoin (optionnel)</label>
+          <textarea id="message" name="message" placeholder="Décrivez brièvement votre projet ou vos attentes…"></textarea>
+        </div>
+
+        <div class="form-consent">
+          <input type="checkbox" id="consent" name="consent" required />
+          <label for="consent">J'accepte d'être recontacté(e) par Thalès Informatique concernant ma demande et j'ai pris connaissance de l'usage de mes données.</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Envoyer ma demande
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+
+        <div class="form-privacy">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          Vos données sont confidentielles et ne seront jamais partagées.
+        </div>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="check-big"><svg width="34" height="34" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Merci, votre demande est envoyée !</h3>
+        <p>Un expert Thalès Informatique vous recontactera sous 24h ouvrées. À très bientôt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo" aria-label="Thalès Informatique">
+          <svg class="logo-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00B7F1"/><stop offset="1" stop-color="#0076B6"/></linearGradient></defs>
+            <polygon points="50,6 96,90 4,90" fill="url(#lg2)"/>
+            <polygon points="50,40 74,84 26,84" fill="#FFFFFF"/>
+          </svg>
+          <span class="logo-text"><b>THALÈS</b><span>Informatique</span></span>
+        </a>
+        <p>Partenaire Sage de référence en Afrique du Nord. Nous accompagnons les entreprises dans leur transformation digitale avec des solutions de gestion fiables, évolutives et sur-mesure.</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/company/thalesinformatique/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.3 18V10H5.7v8h2.6ZM7 8.8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm11 9.2v-4.6c0-2.5-1.3-3.6-3.1-3.6-1.4 0-2 .8-2.4 1.3V10H9.9v8h2.6v-4.4c0-1.2.8-1.7 1.6-1.7.8 0 1.4.6 1.4 1.7V18H18Z"/></svg></a>
+          <a href="https://www.facebook.com/Thales.Informatique?locale=fr_FR" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M14 9V7c0-1 .2-1.5 1.5-1.5H17V2.5h-2.6C11.5 2.5 10 4 10 6.7V9H8v3h2v9.5h3.5V12H16l.5-3H14Z"/></svg></a>
+          <a href="https://www.instagram.com/thales.informatique/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.youtube.com/@thalesinformatique1033" target="_blank" rel="noopener" aria-label="YouTube"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.5A2.5 2.5 0 0 0 2.4 7.3C2 8.8 2 12 2 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C5.7 19 12 19 12 19s6.3 0 7.8-.5a2.5 2.5 0 0 0 1.8-1.8C22 15.2 22 12 22 12ZM10 15V9l5 3-5 3Z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="https://maps.app.goo.gl/XK8BzRFH58aUSTnU6" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 310 Rue Hadj Omar Riffi, Casablanca 20120, Maroc</a>
+        <a href="tel:+212522548780"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg> 05 22 54 87 80</a>
+        <a href="mailto:contact@thales.ma"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> contact@thales.ma</a>
+        <a href="mailto:hotline@thales.ma"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg> Support : hotline@thales.ma</a>
+      </div>
+
+      <div class="foot-col">
+        <h4>Solution</h4>
+        <a href="#avantages"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg> Avantages du Cloud</a>
+        <a href="#solution"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg> Sage 100 Experience Cloud</a>
+        <a href="#references"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg> Nos distinctions</a>
+        <a href="#demande"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg> Demander une démo</a>
+        <a href="https://www.thales.ma" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> www.thales.ma</a>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 Thalès Informatique — Tous droits réservés.</span>
+      <span>Partenaire Sage · Solutions de gestion &amp; transformation digitale</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form = document.getElementById('leadForm');
+  var success = document.getElementById('formSuccess');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){
+      form.reportValidity();
+      return;
+    }
+    // Point d'intégration : brancher ici l'envoi vers votre CRM / endpoint / service email.
+    // Exemple : fetch('/api/lead', { method:'POST', body: new FormData(form) })
+    var data = Object.fromEntries(new FormData(form).entries());
+    console.log('Lead Sage 100 Experience Cloud :', data);
+    form.style.display = 'none';
+    success.style.display = 'block';
+    success.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+})();
+</script>
+</body>
+</html>
