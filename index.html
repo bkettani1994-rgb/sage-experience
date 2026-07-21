@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sage 100 Experience Cloud — Demandez votre démo gratuite | Thalès Informatique</title>
-<meta name="description" content="Pilotez votre entreprise partout, en toute sécurité, avec Sage 100 Experience Cloud. Accompagnement expert par Thalès Informatique. Demandez votre démo gratuite." />
+<title>Sage Experience — Demandez votre démo gratuite | Thalès Informatique</title>
+<meta name="description" content="Pilotez votre entreprise partout, en toute sécurité, avec Sage Experience. Accompagnement expert par Thalès Informatique. Demandez votre démo gratuite." />
 <meta name="robots" content="index, follow" />
 
 <!-- Open Graph (LinkedIn / réseaux sociaux) -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Sage 100 Experience Cloud — La gestion nouvelle génération" />
-<meta property="og:description" content="Pilotez votre entreprise partout, en toute sécurité, avec Sage 100 Experience Cloud. Démo gratuite avec Thalès Informatique." />
+<meta property="og:title" content="Sage Experience — La gestion nouvelle génération" />
+<meta property="og:description" content="Pilotez votre entreprise partout, en toute sécurité, avec Sage Experience. Démo gratuite avec Thalès Informatique." />
 <meta property="og:site_name" content="Thalès Informatique" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,15 +68,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .hero-points li{display:flex;align-items:center;gap:12px;font-size:16px;font-weight:500;color:var(--thales-ink)}
 .hero-points .chk{flex-shrink:0;width:28px;height:28px;border-radius:8px;background:rgba(0,183,241,.12);display:flex;align-items:center;justify-content:center;color:var(--thales-blue)}
 
-/* IA block */
-.ai-block{margin-top:28px;padding-top:24px;border-top:1px solid var(--thales-line)}
-.ai-label{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--thales-blue);margin-bottom:18px}
-.ai-label svg{color:var(--thales-cyan)}
-.ai-grid{display:grid;gap:16px}
-.ai-item{display:flex;gap:13px;align-items:flex-start}
-.ai-ico{flex-shrink:0;width:38px;height:38px;border-radius:10px;background:var(--thales-gradient);display:flex;align-items:center;justify-content:center;color:#fff}
-.ai-item b{display:block;font-size:15.5px;font-weight:600;color:var(--thales-ink);line-height:1.3}
-.ai-item span{display:block;font-size:13.5px;color:var(--thales-slate);line-height:1.45;margin-top:1px}
 
 /* FORM CARD */
 .form-card{background:var(--white);border-radius:18px;padding:34px;box-shadow:var(--shadow-lg);border:1px solid var(--thales-line)}
@@ -121,15 +112,24 @@ footer{background:var(--thales-ink);color:#fff;padding:30px 0}
 .foot-copy{border-top:1px solid rgba(255,255,255,.12);margin-top:24px;padding-top:18px;font-size:12.5px;color:rgba(255,255,255,.6);text-align:center}
 
 @media(max-width:920px){
-  .hero-grid{grid-template-columns:1fr;gap:40px;padding:52px 0 60px}
-  .nav-phone span{display:none}
-  .trust-sep{display:none}
-  .trust .container{gap:28px}
-  .foot{flex-direction:column;text-align:center}
+  .hero{min-height:0;align-items:flex-start}
+  .hero-grid{grid-template-columns:1fr;gap:32px;padding:44px 0 48px}
+  .hero-logo{height:46px;margin-bottom:22px}
 }
-@media(max-width:520px){
+@media(max-width:560px){
+  .container{padding:0 18px}
+  .hero-grid{gap:26px;padding:34px 0 40px}
+  h1{font-size:27px;line-height:1.18}
+  .hero-sub{font-size:16px;margin:16px 0 22px}
+  .hero-points li{font-size:15px}
+  .hero-logo{height:42px;margin-bottom:18px}
   .form-row{grid-template-columns:1fr}
-  .form-card{padding:26px}
+  .form-card{padding:24px 20px;border-radius:16px}
+  .form-head{flex-wrap:wrap;gap:8px}
+  .form-head h2{font-size:20px}
+  .form-badge{font-size:10px;padding:4px 9px}
+  .form-card>p{font-size:13.5px;margin-bottom:20px}
+  .btn-lg{padding:16px 28px;font-size:16px}
 }
 </style>
 </head>
@@ -140,7 +140,7 @@ footer{background:var(--thales-ink);color:#fff;padding:30px 0}
   <div class="container hero-grid">
     <div class="hero-copy">
       <img class="hero-logo" src="https://res.cloudinary.com/dmutnjgp8/image/upload/v1780666585/thales_logo_bleu_petit_bjyxww.png" alt="Thalès Informatique" />
-      <span class="label">Sage 100 Experience Cloud</span>
+      <span class="label">Sage Experience</span>
       <h1>Pilotez votre entreprise <span class="accent">partout,</span> en toute sérénité.</h1>
       <p class="hero-sub">Votre gestion en ligne, sécurisée et toujours à jour. Accompagné par le partenaire Sage n°1 en Afrique du Nord.</p>
       <ul class="hero-points">
@@ -148,27 +148,6 @@ footer{background:var(--thales-ink);color:#fff;padding:30px 0}
         <li><span class="chk"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span> Données sécurisées &amp; sauvegardées</li>
         <li><span class="chk"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span> Toujours à jour, sans manipulation</li>
       </ul>
-
-      <div class="ai-block">
-        <span class="ai-label">
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.9L12 15l-1.9-4.1L5.5 9l4.6-1.4L12 3Z"/><path d="M19 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8L19 14Z"/></svg>
-          Propulsé par l'intelligence artificielle
-        </span>
-        <div class="ai-grid">
-          <div class="ai-item">
-            <span class="ai-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.2-5.6A8.4 8.4 0 1 1 21 11.5Z"/><path d="M9 10h6M9 13h4"/></svg></span>
-            <div><b>Ask AI</b><span>Interrogez votre gestion en langage naturel, comme avec ChatGPT.</span></div>
-          </div>
-          <div class="ai-item">
-            <span class="ai-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/></svg></span>
-            <div><b>Builder AI</b><span>Créez vos interfaces personnalisées, sans compétence technique.</span></div>
-          </div>
-          <div class="ai-item">
-            <span class="ai-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6H19M5 8.5c0 4 3 6.5 7 6.5M19 8.5c0 2-1 3.5-3 4.5"/></svg></span>
-            <div><b>Workflow</b><span>Automatisez vos tâches et vos processus récurrents.</span></div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- FORMULAIRE -->
@@ -262,7 +241,7 @@ footer{background:var(--thales-ink);color:#fff;padding:30px 0}
 
     var data = new FormData(form);
     data.append('date', new Date().toLocaleString('fr-FR'));
-    data.append('source', 'Landing Sage 100 Experience Cloud');
+    data.append('source', 'Landing Sage Experience');
     data.append('page', location.href);
 
     if(SHEET_ENDPOINT.indexOf('XXXXXXXXXXXX') !== -1){
