@@ -62,10 +62,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .hero{position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center;background:radial-gradient(1000px 500px at 90% -10%, rgba(0,183,241,.13), transparent 60%),radial-gradient(800px 460px at 0% 120%, rgba(0,118,182,.08), transparent 60%),var(--white)}
 .hero .container{width:100%}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;padding:56px 0}
-.hero-brand{display:flex;width:fit-content;align-items:center;gap:12px;margin-bottom:26px}
-.hero-brand .logo-mark{width:34px;height:34px;flex-shrink:0}
-.hero-brand .logo-text b{font-size:19px;font-weight:700;color:var(--thales-ink);letter-spacing:.02em}
-.hero-brand .logo-text span{font-size:10px;font-weight:500;letter-spacing:.32em;color:var(--thales-blue);text-transform:uppercase}
+.hero-logo{height:52px;width:auto;margin-bottom:26px}
 .hero-sub{font-size:18px;color:var(--thales-slate);margin:20px 0 28px;max-width:520px}
 .hero-points{list-style:none;display:grid;gap:14px;margin-bottom:8px}
 .hero-points li{display:flex;align-items:center;gap:12px;font-size:16px;font-weight:500;color:var(--thales-ink)}
@@ -83,6 +80,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .field label .req{color:#EF4136}
 .field input,.field select{width:100%;font-family:inherit;font-size:15px;color:var(--thales-ink);padding:12px 14px;border:1.5px solid var(--thales-line);border-radius:10px;background:var(--white);transition:border-color .2s,box-shadow .2s}
 .field input:focus,.field select:focus{outline:none;border-color:var(--thales-cyan);box-shadow:0 0 0 3px rgba(0,183,241,.15)}
+.field select:has(option[value=""]:checked){color:var(--thales-slate)}
 .form-consent{display:flex;gap:9px;align-items:flex-start;margin:4px 0 18px}
 .form-consent input{margin-top:3px;flex-shrink:0;width:16px;height:16px;accent-color:var(--thales-cyan)}
 .form-consent label{font-size:12px;color:var(--thales-slate);line-height:1.5}
@@ -131,14 +129,7 @@ footer{background:var(--thales-ink);color:#fff;padding:30px 0}
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <span class="hero-brand" aria-label="Thalès Informatique">
-        <svg class="logo-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00B7F1"/><stop offset="1" stop-color="#0076B6"/></linearGradient></defs>
-          <polygon points="50,6 96,90 4,90" fill="url(#lg)"/>
-          <polygon points="50,40 74,84 26,84" fill="#FFFFFF"/>
-        </svg>
-        <span class="logo-text"><b>THALÈS</b><span>Informatique</span></span>
-      </span>
+      <img class="hero-logo" src="https://res.cloudinary.com/dmutnjgp8/image/upload/v1780666585/thales_logo_bleu_petit_bjyxww.png" alt="Thalès Informatique" />
       <span class="label">Sage 100 Experience Cloud</span>
       <h1>Pilotez votre entreprise <span class="accent">partout,</span> en toute sérénité.</h1>
       <p class="hero-sub">Votre gestion en ligne, sécurisée et toujours à jour. Accompagné par le partenaire Sage n°1 en Afrique du Nord.</p>
@@ -181,6 +172,18 @@ footer{background:var(--thales-ink);color:#fff;padding:30px 0}
             <label for="tel">Téléphone <span class="req">*</span></label>
             <input type="tel" id="tel" name="tel" placeholder="06 00 00 00 00" required />
           </div>
+        </div>
+        <div class="field">
+          <label for="fonction">Votre fonction <span class="req">*</span></label>
+          <select id="fonction" name="fonction" required>
+            <option value="" disabled selected>Sélectionnez…</option>
+            <option>Dirigeant / Gérant (DG, PDG)</option>
+            <option>Directeur Financier (DAF)</option>
+            <option>Directeur / Responsable SI (DSI)</option>
+            <option>Responsable Comptabilité</option>
+            <option>Responsable RH / Paie</option>
+            <option>Autre</option>
+          </select>
         </div>
 
         <div class="form-consent">
